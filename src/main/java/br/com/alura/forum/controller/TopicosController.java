@@ -40,9 +40,8 @@ public class TopicosController {
 	private CursoRepository cursoRepository;
 
 	@GetMapping
-	public Page<TopicoDto> lista(@RequestParam(required = false) String nomeCurso, 
-			Pageable paginacao) {
-		
+	public Page<TopicoDto> lista(String nomeCurso, Pageable paginacao) {
+
 		if (nomeCurso == null) {
 			Page<Topico> topicos = topicoRepository.findAll(paginacao);
 			return TopicoDto.converter(topicos);
