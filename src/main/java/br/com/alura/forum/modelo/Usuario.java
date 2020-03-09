@@ -86,7 +86,6 @@ public class Usuario implements UserDetails {
 		this.senha = senha;
 	}
 
-
 	// Metodos do UserDetails que sao gerenciados pelo Spring
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -10,11 +10,8 @@ import br.com.alura.forum.modelo.Usuario;
 /**
  * UsuarioRepository
  */
-public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
-    Optional<Usuario> findByEmail(String email) ;
+    Optional<Usuario> findByEmail(String email);
 
-    
 }
-
-    

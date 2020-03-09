@@ -41,5 +41,5 @@ public class Perfil implements GrantedAuthority {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
+
 }

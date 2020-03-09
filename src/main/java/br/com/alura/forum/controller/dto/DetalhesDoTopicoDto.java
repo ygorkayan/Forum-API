@@ -17,7 +17,7 @@ public class DetalhesDoTopicoDto {
 	private String nomeAutor;
 	private StatusTopico status;
 	private List<RespostaDto> respostas;
-	
+
 	public DetalhesDoTopicoDto(Topico topico) {
 		this.id = topico.getId();
 		this.titulo = topico.getTitulo();
@@ -56,5 +56,5 @@ public class DetalhesDoTopicoDto {
 	public List<RespostaDto> getRespostas() {
 		return respostas;
 	}
-	
+
 }
