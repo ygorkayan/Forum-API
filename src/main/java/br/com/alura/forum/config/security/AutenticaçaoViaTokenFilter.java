@@ -23,24 +23,16 @@ public class AutenticaçaoViaTokenFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
-
         String token = recuperarToken(request);
-
         boolean valido = tokenService.isValido(token);
-
-        System.out.println(valido);
-
         filterChain.doFilter(request, response);
     }
 
     private String recuperarToken(HttpServletRequest request) {
-
         String token = request.getHeader("Authorization");
-
         if (token == null || token.isEmpty() || !token.startsWith("Bearer ")) {
             return null;
         }
         return token.split(" ")[1];
     }
-
 }
